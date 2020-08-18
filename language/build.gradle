@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'antlr'
+}
+
+sourceCompatibility = 11;
+targetCompatibility = 11;
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    antlr 'org.antlr:antlr4:4.5'
+
+    annotationProcessor "org.graalvm.truffle:truffle-dsl-processor:${project.graalvmVersion}"
+
+    implementation "org.graalvm.sdk:graal-sdk:${project.graalvmVersion}"
+    implementation "org.graalvm.truffle:truffle-api:${project.graalvmVersion}"
+    implementation 'org.antlr:antlr4-runtime:4.7'
+    compileOnly "org.graalvm.truffle:truffle-tck:${project.graalvmVersion}"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+test {
+    systemProperty "graalvm.locatorDisabled", "true"
+    /*jvmArgs(
+        "--add-opens", "org.graalvm.sdk/org.graalvm.polyglot=ALL-UNNAMED",
+        "--add-exports", "java.base/jdk.internal.module=ALL-UNNAMED"
+    )*/
+}

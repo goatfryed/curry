@@ -1,0 +1,4 @@
+rootProject.name = 'curry'
+
+include 'language',
+    'simplelanguage'

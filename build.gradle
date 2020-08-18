@@ -1,0 +1,7 @@
+
+
+group 'de.goatfryed'
+version '1.0-SNAPSHOT'
+
+ext.graalvmVersion = "20.1.0"
+
