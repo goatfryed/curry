@@ -23,6 +23,10 @@ As the author, I'm heavily influenced by Java, Typescript, JavaScript and PHP.
  - You should be able to understand things, but you don't have to. Embrace the consistent voodoo.
  - Embrace the IDE. The language doesn't need to shine most on paper. Makes a theoretical language probably ugly though. :D
  
+ ### Infer aaaaall the types
+ Curry is a static language designed with type inference in mind. Ideally, the developer should be required
+ to type as little as possible as in e.g. typescript. See [Hindley Milner Type System](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system) for inspiration.
+ 
  
 ## Development state
 The project originated from the whim to look into compiler contruction.
